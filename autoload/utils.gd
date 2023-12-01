@@ -40,13 +40,13 @@ func load_game_options(game:String)->Dictionary:
 	return {}
 
 func _build_data_path(game:String, type:String)->String:
-	return "games/" + game + "/data/" + type + FILE_EXTENSION
+	return "shared/games/" + game + "/data/" + type + FILE_EXTENSION
 
 func _build_quests_path(game:String)->String:
-	return "games/" + game + "/quests/"
+	return "shared/games/" + game + "/quests/"
 
 func get_game_path(game:String)->String:
-	return "games/" + game
+	return "shared/games/" + game
 
 func get_game_data_path(game:String)->String:
 	return get_game_path(game) + "/data/"
