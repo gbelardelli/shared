@@ -9,7 +9,9 @@
                 1,
                 1
             ],
-            "image": ""
+            "image": [
+                "treasureChest.png"
+            ]
         },
         {
             "name": "Trono",
@@ -19,7 +21,9 @@
                 1,
                 1
             ],
-            "image": ""
+            "image": [
+                "throne.png"
+            ]
         },
         {
             "name": "Armadio",
@@ -29,7 +33,9 @@
                 3,
                 1
             ],
-            "image": ""
+            "image": [
+                "cupboard.png"
+            ]
         },
         {
             "name": "Libreria",
@@ -39,7 +45,9 @@
                 3,
                 1
             ],
-            "image": ""
+            "image": [
+                "bookcase.png"
+            ]
         },
         {
             "name": "Caminetto",
@@ -49,7 +57,9 @@
                 3,
                 1
             ],
-            "image": ""
+            "image": [
+                "fireplace.png"
+            ]
         },
         {
             "name": "Tavolo di tortura",
@@ -59,7 +69,9 @@
                 3,
                 2
             ],
-            "image": ""
+            "image": [
+                "rack.png"
+            ]
         },
         {
             "name": "Tavolo dell'alchimista",
@@ -69,7 +81,9 @@
                 3,
                 2
             ],
-            "image": ""
+            "image": [
+                "alchemistsBench.png"
+            ]
         },
         {
             "name": "Bancone del mago",
@@ -79,7 +93,9 @@
                 3,
                 2
             ],
-            "image": ""
+            "image": [
+                "sorcerersTable.png"
+            ]
         },
         {
             "name": "Tomba",
@@ -89,7 +105,9 @@
                 3,
                 2
             ],
-            "image": ""
+            "image": [
+                "tomb.png"
+            ]
         },
         {
             "name": "Rastrelliera",
@@ -99,7 +117,9 @@
                 3,
                 1
             ],
-            "image": ""
+            "image": [
+                "weaponsRack.png"
+            ]
         },
         {
             "name": "Porta aperta",
@@ -109,7 +129,9 @@
                 1,
                 1
             ],
-            "image": ""
+            "image": [
+                "openDoor.png"
+            ]
         },
         {
             "name": "Porta chiusa",
@@ -119,7 +141,9 @@
                 1,
                 1
             ],
-            "image": ""
+            "image": [
+                "door.png"
+            ]
         },
         {
             "name": "Tavolo",
@@ -129,7 +153,9 @@
                 3,
                 2
             ],
-            "image": ""
+            "image": [
+                "table.png"
+            ]
         }
     ]
 }
