@@ -4,7 +4,14 @@
     "game_type": "fixed_board",
     "game_board": {
         "width": 26,
-        "height": 19
+        "height": 19,
+        "background" : [
+            {
+                "name" : "Principale",
+                "image" : "board_01",
+                "offset" : []
+            }
+        ]
     },
     "furnitures": {
         "use_furnitures": true,
