@@ -4,8 +4,8 @@ const FILE_EXTENSION:String = ".json"
 
 
 func load_furnitures(game:String)->Dictionary:
-	var path = _build_data_path(game, KeyManager.KEY_FURNITURE)
-	var data = _load_json(path)
+	var path = _build_data_path(game)
+	var data = _load_json(path+KeyManager.KEY_FURNITURE+FILE_EXTENSION)
 
 	if _check_game(data,game) == true:
 		return data
@@ -13,8 +13,8 @@ func load_furnitures(game:String)->Dictionary:
 	return {}
 
 func load_cards(game:String)->Dictionary:
-	var path = _build_data_path(game, KeyManager.KEY_CARDS)
-	var data = _load_json(path)
+	var path = _build_data_path(game)
+	var data = _load_json(path+KeyManager.KEY_CARDS+FILE_EXTENSION)
 
 	if _check_game(data,game) == true:
 		return data
@@ -22,8 +22,8 @@ func load_cards(game:String)->Dictionary:
 	return {}
 
 func load_monsters(game:String)->Dictionary:
-	var path = _build_data_path(game, KeyManager.KEY_MONSTERS)
-	var data = _load_json(path)
+	var path = _build_data_path(game)
+	var data = _load_json(path+KeyManager.KEY_MONSTERS+FILE_EXTENSION)
 
 	if _check_game(data,game) == true:
 		return data
@@ -31,16 +31,31 @@ func load_monsters(game:String)->Dictionary:
 	return {}
 
 func load_game_options(game:String)->Dictionary:
-	var path = _build_data_path(game, KeyManager.KEY_OPTIONS)
-	var data = _load_json(path)
+	var path = _build_data_path(game)
+	var data = _load_json(path+KeyManager.KEY_OPTIONS+FILE_EXTENSION)
 
 	if _check_game(data,game) == true:
 		return data
 
 	return {}
 
-func _build_data_path(game:String, type:String)->String:
-	return "shared/games/" + game + "/data/" + type + FILE_EXTENSION
+
+func save_game_options(options:Dictionary)->bool:
+	if not options.has(KeyManager.KEY_GAME_TOKEN):
+		print("Key '%s' not found in '%s'" % [KeyManager.KEY_GAME_TOKEN, options])
+		return false
+
+	var path = _build_data_path(options[KeyManager.KEY_GAME_TOKEN] )
+	var err=DirAccess.make_dir_recursive_absolute(path)
+	print(err)
+	var file = FileAccess.open(path+ KeyManager.KEY_OPTIONS + FILE_EXTENSION, FileAccess.WRITE)
+	file.store_line(JSON.stringify(options))
+	file.close()
+	return true
+
+
+func _build_data_path(game:String)->String:
+	return "shared/games/" + game + "/data/"
 
 func _build_quests_path(game:String)->String:
 	return "shared/games/" + game + "/quests/"
