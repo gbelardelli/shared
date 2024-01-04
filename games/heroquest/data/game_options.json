@@ -8,8 +8,9 @@
         "background" : [
             {
                 "name" : "Principale",
-                "image" : "board_01",
-                "offset" : []
+                "image" : "board_01.png",
+                "offset": "(14, 10)",
+                "scale" : 0.44668309098894
             }
         ]
     },

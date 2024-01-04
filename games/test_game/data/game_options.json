@@ -1,0 +1,1 @@
+{"author":"Gianluca","cards":false,"furnitures":{"furniture_count":true,"use_furnitures":true},"game_board":{"background":[{"image":"C:/godot/Projects/editor/assets/grid-30.png","offset":"(0, 0)"}],"height":19,"width":26},"game_token":"test_game","game_type":"board_game","name":"Test Game","version":"1_0_0"}

@@ -3,6 +3,14 @@ extends Node
 const FILE_EXTENSION:String = ".json"
 
 
+func load_dictionary(game:String,key:String)->Dictionary:
+	var path = _build_data_path(game)
+	var data = _load_json(path+key+FILE_EXTENSION)
+	if _check_game(data,game) == true:
+		return data
+
+	return {}
+
 func load_furnitures(game:String)->Dictionary:
 	var path = _build_data_path(game)
 	var data = _load_json(path+KeyManager.KEY_FURNITURE+FILE_EXTENSION)
@@ -65,6 +73,9 @@ func get_game_path(game:String)->String:
 
 func get_game_data_path(game:String)->String:
 	return get_game_path(game) + "/data/"
+
+func get_game_assets_path(game:String)->String:
+	return get_game_data_path(game) + "/assets/"
 
 func _load_json(path:String)->Dictionary:
 	if not FileAccess.file_exists(path):

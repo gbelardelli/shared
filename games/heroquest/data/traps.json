@@ -1,41 +1,41 @@
 {
-    "game_token": "heroquest",
-    "traps": [
-        {
-            "name": "Masso cadente",
-            "article": 2,
-            "quantity": 5,
-            "size": [
-                1,
-                1
-            ],
-            "image": [
-                "fallingRock.png"
-            ]
-        },
-        {
-            "name": "Fossa",
-            "article": 0,
-            "quantity": 5,
-            "size": [
-                1,
-                1
-            ],
-            "image": [
-                "pitTrap.png"
-            ]
-        },
-        {
-            "name": "Trappola con lancia",
-            "article": 0,
-            "quantity": 6,
-            "size": [
-                1,
-                1
-            ],
-            "image": [
-                "spearTrap.png"
-            ]
-        }
-    ]
+	"game_token": "heroquest",
+	"traps": [
+		{
+			"name": "Masso cadente",
+			"article": 2,
+			"quantity": 5,
+			"size": [
+				1,
+				1
+			],
+			"image": [
+				"fallingRock.png"
+			]
+		},
+		{
+			"name": "Fossa",
+			"article": 0,
+			"quantity": 5,
+			"size": [
+				1,
+				1
+			],
+			"image": [
+				"pitTrap.png"
+			]
+		},
+		{
+			"name": "Trappola con lancia",
+			"article": 0,
+			"quantity": 6,
+			"size": [
+				1,
+				1
+			],
+			"image": [
+				"spearTrap.png"
+			]
+		}
+	]
 }
