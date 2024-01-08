@@ -1,0 +1,26 @@
+{
+    "name": "Heroquest",
+    "version": "1_0_0",
+    "author": "Gianluca",
+    "icon": "heroquest.png",
+    "game_token": "heroquest",
+    "game_type": "fixed_board",
+    "game_board": {
+        "width": 26,
+        "height": 19,
+        "background" : [
+            {
+                "name" : "Principale",
+                "image" : "board_01.png",
+                "offset": "(14, 10)",
+                "scale" : 0.44668309098894
+            }
+        ]
+    },
+    "furnitures": {
+        "use_furnitures": true,
+        "furniture_count": true
+    },
+    "cards": true,
+    "wandering": "none:one_time:on_demand"
+}

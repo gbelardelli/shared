@@ -1,7 +1,7 @@
 extends Node
 
 const FILE_EXTENSION:String = ".json"
-
+const GAMES_ROOT_DIR:String = "shared/games/"
 
 func load_dictionary(game:String,key:String)->Dictionary:
 	var path = _build_data_path(game)
@@ -63,13 +63,13 @@ func save_game_options(options:Dictionary)->bool:
 
 
 func _build_data_path(game:String)->String:
-	return "shared/games/" + game + "/data/"
+	return GAMES_ROOT_DIR + game + "/data/"
 
 func _build_quests_path(game:String)->String:
-	return "shared/games/" + game + "/quests/"
+	return GAMES_ROOT_DIR + game + "/quests/"
 
 func get_game_path(game:String)->String:
-	return "shared/games/" + game
+	return GAMES_ROOT_DIR + game + "/"
 
 func get_game_data_path(game:String)->String:
 	return get_game_path(game) + "/data/"
@@ -127,6 +127,26 @@ func get_quests_list(game:String)->Array:
 	else:
 		print("Huston we have a problem! An error occurred when trying to access the path '%s'" %[dir_path])
 	
+	return result
+
+
+func get_games_list()->Array:
+	var result:Array = []
+	var dir=DirAccess.open(GAMES_ROOT_DIR)
+	if dir:
+		dir.list_dir_begin()
+		var dir_name = dir.get_next()
+		while dir_name != "":
+			if dir.current_is_dir() == true:
+				var path=GAMES_ROOT_DIR+dir_name+"/"+dir_name+".json"
+				var game=_load_json(path)
+				if game.size() > 0:
+					result.append(game)
+
+			dir_name = dir.get_next()
+	else:
+		print("Huston we have a problem! An error occurred when trying to access the path 'shared/games'")
+
 	return result
 
 func roll_d100_chance(percent:int)->bool:
